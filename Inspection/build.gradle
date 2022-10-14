@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 31`
+
+    defaultConfig {
+        minSdkVersion 30
+        targetSdkVersion 31
+    }
+}
+
+dependencies {
+    /*
+     * Other Modules
+     */
+    implementation project(':Hardware')
+    implementation project(':RobotCore')
+
+    /*
+     * External
+     */
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}
